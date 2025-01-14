@@ -157,7 +157,7 @@ function isColliding(obj1, obj2) {
     );
 }
 
-const countdownDuration = 10 * 1000; // 10 seconds
+const countdownDuration = 60 * 1000; // 10 seconds
 const endTime = Date.now() + countdownDuration;
 
 function formatTime(ms) {
