@@ -207,10 +207,12 @@ function gameOverMessage () {
 }
 
 function scoreText() {
-    ctx.fillStyle = 'white';
-    ctx.font = '30px Impact';
-    ctx.fillText(`${bottleScore}`, 660, 538);
-    ctx.fillText(`${crispbagScore}`, 660, 580);
+    if (!gameOver){
+        ctx.fillStyle = 'white';
+        ctx.font = '30px Impact';
+        ctx.fillText(`${bottleScore}`, 660, 538);
+        ctx.fillText(`${crispbagScore}`, 660, 580);
+    }
 }
 
 let gameOver = true
