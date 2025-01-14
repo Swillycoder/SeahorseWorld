@@ -5,22 +5,22 @@ canvas.width = 800;
 canvas.height = 600;
 
 const bg_img = new Image();
-bg_img.src = 'http://localhost:8000/bg.png';
+bg_img.src = 'https://raw.githubusercontent.com/Swillycoder/SeahorseWorld/main/bg.png';
 
 const seahorse_img = new Image();
-seahorse_img.src = 'http://localhost:8000/seahorse.png';
+seahorse_img.src = 'https://raw.githubusercontent.com/Swillycoder/SeahorseWorld/main/seahorse.png';
 
 const crispbag_img = new Image();
-crispbag_img.src = 'http://localhost:8000/crispbag.png';
+crispbag_img.src = 'https://raw.githubusercontent.com/Swillycoder/SeahorseWorld/main/crispbag.png';
 
 const bottle_img = new Image();
-bottle_img.src = 'http://localhost:8000/bottle.png';
+bottle_img.src = 'https://raw.githubusercontent.com/Swillycoder/SeahorseWorld/main/bottle.png';
 
 const exit_img = new Image();
-exit_img.src = 'http://localhost:8000/exit_screen.png';
+exit_img.src = 'https://raw.githubusercontent.com/Swillycoder/SeahorseWorld/main/exit_screen.png';
 
 const intro_img = new Image();
-intro_img.src = 'http://localhost:8000/intro_bg.png';
+intro_img.src = 'https://raw.githubusercontent.com/Swillycoder/SeahorseWorld/main/intro_bg.png';
 
 let mouseX = 0;
 let mouseY = 0;
