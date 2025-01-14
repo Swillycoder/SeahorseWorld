@@ -125,8 +125,6 @@ let trashArray1 = [];
 let trashArray2 = [];
 let crispbagScore = 0
 let bottleScore = 0
-let crispbagScoreFinal = 0
-let bottleScoreFinal = 0
 
 // Function to spawn trash
 function spawnTrash(array, x, y,speedX, speedY, image, width, height) {
@@ -205,7 +203,7 @@ function gameOverMessage () {
     ctx.fillText(`${crispbagScoreFinal}`, 288, 289);
     ctx.fillText(`${bottleScoreFinal}`, 564, 285);
     gameOver = true
-    //requestAnimationFrame(gameOverMessage);
+    requestAnimationFrame(gameOverMessage);
 }
 
 function scoreText() {
