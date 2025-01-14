@@ -4,6 +4,9 @@ const ctx = canvas.getContext('2d');
 canvas.width = 800;
 canvas.height = 600;
 
+const intro_img = new Image();
+intro_img.src = 'https://raw.githubusercontent.com/Swillycoder/SeahorseWorld/main/intro_bg.png';
+
 const bg_img = new Image();
 bg_img.src = 'https://raw.githubusercontent.com/Swillycoder/SeahorseWorld/main/bg.png';
 
@@ -18,9 +21,6 @@ bottle_img.src = 'https://raw.githubusercontent.com/Swillycoder/SeahorseWorld/ma
 
 const exit_img = new Image();
 exit_img.src = 'https://raw.githubusercontent.com/Swillycoder/SeahorseWorld/main/exit_screen.png';
-
-const intro_img = new Image();
-intro_img.src = 'https://raw.githubusercontent.com/Swillycoder/SeahorseWorld/main/intro_bg.png';
 
 let mouseX = 0;
 let mouseY = 0;
@@ -184,7 +184,7 @@ function gameOverMessage () {
     ctx.fillText(`${crispbagScore}`, 288, 289);
     ctx.fillText(`${bottleScore}`, 564, 285);
     gameOver = true
-    requestAnimationFrame(gameOverMessage);
+    //requestAnimationFrame(gameOverMessage);
 }
 
 function scoreText() {
