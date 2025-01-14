@@ -103,13 +103,30 @@ class Trash {
     }
 }
 
+let imagesLoaded = 0;
+const totalImages = 6; // Adjust to match total image count
+
+function checkAllImagesLoaded() {
+    imagesLoaded += 1;
+    if (imagesLoaded === totalImages) {
+        gameStart(); // Start game when all images are loaded
+    }
+}
+
+bg_img.onload = checkAllImagesLoaded;
+seahorse_img.onload = checkAllImagesLoaded;
+crispbag_img.onload = checkAllImagesLoaded;
+bottle_img.onload = checkAllImagesLoaded;
+exit_img.onload = checkAllImagesLoaded;
+intro_img.onload = checkAllImagesLoaded;
+
 const player = new Player(canvas.width / 2, canvas.height / 2);
 let trashArray1 = [];
 let trashArray2 = [];
 let crispbagScore = 0
 let bottleScore = 0
-const crispbagScoreFinal = crispbagScore
-const bottleScoreFinal = bottleScore
+let crispbagScoreFinal = 0
+let bottleScoreFinal = 0
 
 // Function to spawn trash
 function spawnTrash(array, x, y,speedX, speedY, image, width, height) {
@@ -179,6 +196,8 @@ function timerText() {
 }
 
 function gameOverMessage () {
+    crispbagScoreFinal = crispbagScore
+    bottleScoreFinal = bottleScore
     ctx.drawImage(exit_img, 0,0)
     ctx.font = '40px Impact';
     ctx.textAlign = 'center'
@@ -241,7 +260,7 @@ function gameLoop() {
     }
 }
 
-gameStart();
+checkAllImagesLoaded()
 
 // Handle mouse click event
 canvas.addEventListener('click', (event) => {
